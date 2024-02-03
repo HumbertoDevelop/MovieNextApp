@@ -1,0 +1,2 @@
+export const upcomingMoviesUrl = "https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1";
+export const topRatedMoviesUrl = "https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=1";
