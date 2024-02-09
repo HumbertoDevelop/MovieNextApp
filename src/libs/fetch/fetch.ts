@@ -12,9 +12,8 @@ export const getUpComingMovies = async () => {
 				"Content-Type": "aplication/json",
 				Authorization: "Bearer " + process.env.MOVIEDB_TOKEN,
 			},
-		});
-		const data = await response.json();
-
+		}).then(response => response.json());
+		const data =  response;
 		return data;
 	} catch (error) {
 		console.error(error);
