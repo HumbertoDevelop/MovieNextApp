@@ -6,7 +6,7 @@ export default async function UpComingListMovies() {
 	const { dates, pages, results, total_pages, total_results } = await getUpComingMovies();
 	return (
 		<div className="gap-2 grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-8 p-4">
-			{results.length > 0 || results ? (
+			{results ? (
 				results.map(
 					({
 						id,
