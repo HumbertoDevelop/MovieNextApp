@@ -2,9 +2,9 @@
 import { getUpComingMovies } from "@/libs/fetch/fetch";
 import { Card, CardHeader, Image, CardFooter, Button } from "@nextui-org/react";
 
-export const UpComingListMovies = async () => {
-	
-	const { dates, pages, results, total_pages, total_results } = await getUpComingMovies();
+export default async function UpComingListMovies() {
+	const { dates, pages, results, total_pages, total_results } =
+		await getUpComingMovies();
 	return (
 		<div className="gap-2 grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-8 p-4">
 			{results ? (
@@ -29,7 +29,10 @@ export const UpComingListMovies = async () => {
 							? "https://image.tmdb.org/t/p/w500/" + poster_path
 							: "https://image.tmdb.org/t/p/w500/" + backdrop_path;
 						return (
-							<Card key={id} isFooterBlurred className="w-full h-[300px] animation-movies">
+							<Card
+								key={id}
+								isFooterBlurred
+								className="w-full h-[300px] animation-movies">
 								<CardHeader className="absolute z-10 top-1 flex-col items-start">
 									{/* <p className="text-tiny text-white/60 uppercase font-bold"> */}
 									{/* {overview} */}
@@ -66,4 +69,4 @@ export const UpComingListMovies = async () => {
 			)}
 		</div>
 	);
-};
+}

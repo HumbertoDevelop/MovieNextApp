@@ -2,8 +2,8 @@
 
 import GenreNavbar from "@/components/GenreNavbar";
 import { NowPlaying } from "@/components/NowPlaying";
+import UpComingListMovies from "@/components/UpComingListMovies";
 // import { TopRatedListMovies } from "@/components/TopRatedListMovies";
-import { UpComingListMovies } from "@/components/UpComingListMovies";
 
 export default async function Page() {
 	return (
