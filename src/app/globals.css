@@ -92,7 +92,7 @@ body {
   transition: text-decoration .3s ease-in;
   cursor: pointer;
   text-decoration: var(--red-primary);
-  word-wrap:unset;
+  white-space: nowrap;
 }
 
 .list-styled>li:hover{
