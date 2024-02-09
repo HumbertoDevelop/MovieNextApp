@@ -60,7 +60,7 @@ export default function NavbarApp() {
       </NavbarContent>
     </NavbarContent>
 
-    <NavbarContent as="div" className="items-center" justify="end">
+    {/* <NavbarContent as="div" className="items-center" justify="end"> */}
       {/* <Input
         classNames={{
           base: "max-w-full sm:max-w-[10rem] h-10",
@@ -73,7 +73,7 @@ export default function NavbarApp() {
         startContent={<SearchIcon size={18} />}
         type="search"
       /> */}
-      <Dropdown placement="bottom-end"  className="bg-zinc-900">
+      {/* <Dropdown placement="bottom-end"  className="bg-zinc-900">
         <DropdownTrigger>
           <Avatar
             isBordered
@@ -100,8 +100,8 @@ export default function NavbarApp() {
             Log Out
           </DropdownItem>
         </DropdownMenu>
-      </Dropdown>
-    </NavbarContent>
+      </Dropdown> */}
+    {/* </NavbarContent> */}
   </Navbar>
   );
 }
