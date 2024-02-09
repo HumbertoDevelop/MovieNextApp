@@ -1,17 +1,19 @@
 /** @format */
 
-import { ListMovies } from "@/components/ListMovies";
-import { getUpComingMovies } from "@/libs/fetch/fetch";
-// import Image from "next/image";
+import GenreNavbar from "@/components/GenreNavbar";
+import { NowPlaying } from "@/components/NowPlaying";
+import { TopRatedListMovies } from "@/components/TopRatedListMovies";
+import { UpComingListMovies } from "@/components/UpComingListMovies";
 
 export default async function Home() {
-	const { dates, pages, results, total_pages, total_results } =
-		await getUpComingMovies();
-	// https://image.tmdb.org/t/p/w500/ldfCF9RhR40mppkzmftxapaHeTo.jpg
-// console.log(results)
 	return (
-		<div>
-			<ListMovies results={results}/>
-		</div>
+		<>
+			<header className="container-header grid grid-cols-1 p-2 h-screen items-center sm:grid-cols-2 lg:grid-cols-3">
+				<NowPlaying />
+			</header>
+			<GenreNavbar/>
+			<UpComingListMovies/>
+			{/* <TopRatedListMovies/> */}
+		</>
 	);
 }

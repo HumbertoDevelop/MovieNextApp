@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --red-primary: #af0101;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,13 +19,118 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+      scroll-behavior: smooth;
+      scrollbar-color: var(--red-primary);
 }
+
+/* header */
+.container-header {
+  background-image: url('https://www.10wallpaper.com/wallpaper/1366x768/2103/Deadpool_3_2021_Films_5K_HD_Poster_1366x768.jpg');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-clip: border-box;
+  background-size: cover;
+}
+/* header */
+
+/* scroll genres */
+.scroll-horizontal{
+  scroll-behavior: smooth;
+  scrollbar-color:  var(--red-primary) transparent;
+  scrollbar-width: thin;
+}
+/* scroll genres */
+
+/* movies scroll fade-in animation */
+.animation-movies{
+  
+  animation: fadeInOutMovies linear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 30%;
+}
+
+@keyframes fadeInOutMovies {
+  0%{
+    opacity: 0;
+  }
+  
+  100%{
+    opacity: 1;
+  }
+}
+/* movies scroll fade-in animation */
+
+/* navbar scroll animation */
+.animation-scrollbar {
+  animation: backgroundNavbar linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0 750px;
+}
+
+@keyframes backgroundNavbar {
+  0%{
+    background-color: transparent;
+  }
+  
+  100%{
+    background-color: black;
+  }
+}
+/* navbar scroll animation */
+
+/* list ul */
+.list-styled {
+  list-style: none;
+}
+
+.list-styled>li {
+  padding: 5px 20px;
+  margin: 0 .3rem;
+  transition: text-decoration .3s ease-in;
+  cursor: pointer;
+  text-decoration: var(--red-primary);
+  word-wrap:unset;
+}
+
+.list-styled>li:hover{
+  text-decoration: underline var(--red-primary);
+}
+/* list ul */
+
+
+/* 
+.bio-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10em 0 0 10rem;
+}
+
+.bio-card h1{
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgb(175, 1, 1);
+}
+
+.bio-card p{
+  font-size: .9rem;
+  font-style: normal;
+  color: whitesmoke;
+}
+
+.coming-soon-button{
+  background-color: rgb(175, 1, 1);;
+  padding: 10px;
+  border-radius: 5%;
+  width: fit-content;
+  height: fit-content;
+  cursor:default;
+} */
+
+
 
 @layer utilities {
   .text-balance {

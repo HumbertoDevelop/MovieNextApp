@@ -1,7 +1,12 @@
 /** @format */
+import { getTopRatedMovies, getUpComingMovies } from "@/libs/fetch/fetch";
 import { Card, CardHeader, Image, CardFooter, Button } from "@nextui-org/react";
 
-export const ListMovies = ({ results }: any) => {
+export const TopRatedListMovies = async () => {
+	
+	
+	const { page, results, total_pages, total_results } = await getTopRatedMovies();
+
 	return (
 		<div className="gap-2 grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-8 p-4">
 			{results.length > 0 && results ? (
