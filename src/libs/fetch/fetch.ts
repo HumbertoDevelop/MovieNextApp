@@ -2,7 +2,7 @@
 
 // Movies
 
-import { movieGenresUrl, nowPlayingUrl, topRatedMoviesUrl, upcomingMoviesUrl } from "../url/url";
+import { movieGenresUrl, nowPlayingUrl, topRatedMoviesUrl, upcomingMoviesUrl } from "@/libs/url/url";
 
 export const getUpComingMovies = async () => {
 	try {
