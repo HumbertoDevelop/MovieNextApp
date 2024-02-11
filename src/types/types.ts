@@ -1,6 +1,4 @@
-/** @format */
-
-interface IMovie {
+type TMovie = {
 	id?: string;
 	adult: boolean;
 	backdrop_path: string;
@@ -15,4 +13,6 @@ interface IMovie {
 	video: boolean;
 	vote_average: number;
 	vote_count: number;
-}
+};
+
+type TMovieResponse = TMovie[];

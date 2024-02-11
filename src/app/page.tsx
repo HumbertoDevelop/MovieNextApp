@@ -2,6 +2,7 @@
 
 import GenreNavbar from "@/components/GenreNavbar";
 import { NowPlaying } from "@/components/NowPlaying";
+import { TopRatedListMovies } from "@/components/TopRatedListMovies";
 import UpComingListMovies from "@/components/UpComingListMovies";
 // import { TopRatedListMovies } from "@/components/TopRatedListMovies";
 
@@ -13,7 +14,7 @@ export default async function Page() {
 			</header>
 			<GenreNavbar/>
 			<UpComingListMovies/>
-			{/* <TopRatedListMovies/> */}
+			<TopRatedListMovies/>
 		</>
 	);
 }
